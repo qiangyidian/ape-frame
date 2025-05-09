@@ -2,13 +2,13 @@ server:
   port: 8080
 spring:
   datasource:
-    name: root
-    password: 123
+    username: root  # 更标准的属性名
+    password: 123   # 建议使用环境变量或加密
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://100.66.169.95:3306/ape-frame?serverTimeZone=Asia/Shanghai&Unicode=true&characterEncod:UTF-8
-    type: com.alibaba.druid.pool.DruidDataSource #进行选择连接池为Druid
+    url: jdbc:mysql://100.66.169.95:3306/ape-frame?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8
+    type: com.alibaba.druid.pool.DruidDataSource
     druid:
-      initial-size: 20  #初始容量
+      initial-size: 20
       min-idle: 20
-      max-active: 100 #最大连接数
-      max-wait: 60000  #多少毫秒进行连接不上连接池的话进行报错
+      max-active: 100
+      max-wait: 60000

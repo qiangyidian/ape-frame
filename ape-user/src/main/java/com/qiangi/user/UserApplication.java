@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
+
 //resouce中的application.yml就是对于这个启动类进行的配置
 @SpringBootApplication
 @MapperScan(value = "com.qiangi.*.mapper")//进行扫描mapper的xml文件

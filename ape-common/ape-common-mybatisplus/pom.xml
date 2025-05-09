@@ -35,8 +35,8 @@
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
-            <version>3.5.6</version>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.5.3.1</version> <!-- 支持 Java 8 的稳定版本 -->
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>

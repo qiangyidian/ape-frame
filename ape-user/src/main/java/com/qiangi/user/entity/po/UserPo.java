@@ -1,24 +1,35 @@
 package com.qiangi.user.entity.po;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
-/**
- * Po就是直接跟数据库进行交互
- */
-@TableName("user")
+import java.time.LocalDateTime;
+
 @Data
+@TableName("user")
 public class UserPo {
-    @TableId(value = "id" ,type = IdType.AUTO)
-    private String id;
+    @TableId(type = IdType.AUTO)
+    private Long id;
+
     private String name;
     private Integer age;
+
+    @TableField(fill = FieldFill.INSERT)
     private String createBy;
-    private String createTime;
+
+    @TableField(value = "create_time", fill = FieldFill.INSERT)
+    private LocalDateTime createTime;
+
+    @TableField(fill = FieldFill.UPDATE)
     private String updateBy;
-    private String updateTime;
+
+    @TableField(value = "update_time", fill = FieldFill.UPDATE)
+    private LocalDateTime updateTime;
+
+    @TableLogic
     private Integer deletedFlag;
+
+    @Version
+    @TableField(fill = FieldFill.INSERT)
     private Integer version;
 }

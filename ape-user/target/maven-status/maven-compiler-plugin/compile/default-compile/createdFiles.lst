@@ -1,0 +1,4 @@
+com\qingi\user\controller\TestController.class
+com\qingi\user\entity\po\UserPo.class
+com\qingi\user\UserApplication.class
+com\qingi\user\mapper\UserMapper.class

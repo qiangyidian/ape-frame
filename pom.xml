@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.qingi</groupId>
+    <artifactId>ape-frame</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+<!--    进行将springboot的框架进行定义为父框架的父类-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.2</version>
+    </parent>
+<!--    在该父模块之下进行建立新的模块的时候会进行自动在modules中进行添加内容-->
+    <modules>
+        <module>ape-user</module>
+        <module>ape-common</module>
+    </modules>
+
+    <properties>
+<!--        进行配置pom文件中的一些配置,方便进行管理-->
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.plugin.version>3.10.1</maven.plugin.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <mavne.tagert.source>1.8</mavne.tagert.source>
+    </properties>
+
+
+<!--    进行定义该项目的仓库的地址-->
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>aliyun maven</name>
+            <url>https://maven.aliyun.com/nexus/content/groups/public/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <dependencyManagement>
+
+    </dependencyManagement>
+    <build>
+        <plugins>
+<!--            使用Maven的插件进行编译-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.plugin.version}</version>
+                <configuration>
+<!--                    进行定义编译的选项-->
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+
+        </plugins>
+<!--        进行定义打包的文件-->
+        <resources>
+            <resource>
+<!--                进行将Java的源代码进行定义进去-->
+                <directory>src/main/resource</directory>
+            </resource>
+            <resource>
+<!--                将mybatis的文件进行打包进去-->
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*/xml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
+
+</project>

@@ -1,0 +1,32 @@
+package com.qiangi.user.entity;
+
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.baomidou.mybatisplus.annotation.Version;
+import lombok.Data;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
+@Data
+public class BaseEntity implements Serializable {
+    @TableField(fill = FieldFill.INSERT)
+    private String createBy;
+
+    @TableField(value = "create_time", fill = FieldFill.INSERT)
+    private LocalDateTime createTime;
+
+    @TableField(fill = FieldFill.UPDATE)
+    private String updateBy;
+
+    @TableField(value = "update_time", fill = FieldFill.UPDATE)
+    private LocalDateTime updateTime;
+
+    @TableLogic
+    private Integer deletedFlag;
+
+    @Version
+    @TableField(fill = FieldFill.INSERT)
+    private Integer version;
+}

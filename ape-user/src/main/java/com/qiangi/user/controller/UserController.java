@@ -7,9 +7,7 @@ import com.qiangi.user.entity.req.UserReq;
 import com.qiangi.user.service.UserService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class UserController {
@@ -22,5 +20,16 @@ public class UserController {
         UserDto userDto = new UserDto();
         BeanUtils.copyProperties(userReq,userDto);
         return Result.ok(userService.add(userDto));
+    }
+
+
+    /**
+     * 此处的删除是进行的逻辑删除,并不会进行直接将数据库中的数据进行删除,而是将删除flag进行标注为已删除
+     * @param id
+     * @return
+     */
+    @DeleteMapping("/{id}")
+    public Result delect(@PathVariable Integer id){
+        return Result.ok(userService.delect(id));
     }
 }

@@ -18,7 +18,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
     public void insertFill(MetaObject metaObject) {
         this.strictInsertFill(metaObject, "createTime", LocalDateTime.class, LocalDateTime.now()); // 使用Java字段名
         this.strictInsertFill(metaObject, "createBy", String.class, "qiangi");
-        // 不需要填充 deletedFlag，因为 @TableLogic 会处理
+        this.strictInsertFill(metaObject,"deleteFlag", Integer.class, 0);
         this.strictInsertFill(metaObject, "version", Integer.class, 0);
     }
 

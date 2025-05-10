@@ -7,4 +7,6 @@ import com.qiangi.user.entity.dto.UserDto;
 //service和mapper进行交互使用的是po
 public interface UserService {
     int add(UserDto userDto);
+
+    Object delect(Integer id);
 }

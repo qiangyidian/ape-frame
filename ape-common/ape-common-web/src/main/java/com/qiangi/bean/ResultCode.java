@@ -1,4 +1,4 @@
-package com.qiangi;
+package com.qiangi.bean;
 
 public class ResultCode {
 

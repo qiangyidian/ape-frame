@@ -1,6 +1,7 @@
 package com.qiangi.user.controller;
 
 
+import com.qiangi.Result;
 import com.qiangi.user.entity.dto.UserDto;
 import com.qiangi.user.entity.req.UserReq;
 import com.qiangi.user.service.UserService;
@@ -17,9 +18,9 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/add")
-    public int addUser(@RequestBody UserReq userReq){
+    public Result addUser(@RequestBody UserReq userReq){
         UserDto userDto = new UserDto();
         BeanUtils.copyProperties(userReq,userDto);
-        return userService.add(userDto);
+        return Result.ok(userService.add(userDto));
     }
 }

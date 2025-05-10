@@ -1,1 +1,5 @@
-com\qingi\App.class
+com\qiangi\user\handler\MyMetaObjectHandler.class
+com\qiangi\user\entity\BaseEntity.class
+com\qiangi\user\interceptor\SqlBeautyInterceptor.class
+com\qiangi\user\config\MybatisConfiguration.class
+com\qiangi\user\entity\PageResult.class

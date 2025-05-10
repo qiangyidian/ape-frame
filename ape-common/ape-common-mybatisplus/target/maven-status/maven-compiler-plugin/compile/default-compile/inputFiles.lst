@@ -1,1 +1,5 @@
-D:\Gitee\demo\ape-frame\ape-common\ape-common-mybatisplus\src\main\java\com\qingi\App.java
+D:\Gitee\demo\ape-frame\ape-common\ape-common-mybatisplus\src\main\java\com\qiangi\user\config\MybatisConfiguration.java
+D:\Gitee\demo\ape-frame\ape-common\ape-common-mybatisplus\src\main\java\com\qiangi\user\entity\PageResult.java
+D:\Gitee\demo\ape-frame\ape-common\ape-common-mybatisplus\src\main\java\com\qiangi\user\entity\BaseEntity.java
+D:\Gitee\demo\ape-frame\ape-common\ape-common-mybatisplus\src\main\java\com\qiangi\user\interceptor\SqlBeautyInterceptor.java
+D:\Gitee\demo\ape-frame\ape-common\ape-common-mybatisplus\src\main\java\com\qiangi\user\handler\MyMetaObjectHandler.java

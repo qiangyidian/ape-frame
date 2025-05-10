@@ -3,6 +3,7 @@ D:\Gitee\demo\ape-frame\ape-user\src\main\java\com\qiangi\user\mapper\UserMapper
 D:\Gitee\demo\ape-frame\ape-user\src\main\java\com\qiangi\user\controller\UserController.java
 D:\Gitee\demo\ape-frame\ape-user\src\main\java\com\qiangi\user\service\UserService.java
 D:\Gitee\demo\ape-frame\ape-user\src\main\java\com\qiangi\user\controller\TestController.java
+D:\Gitee\demo\ape-frame\ape-user\src\main\java\com\qiangi\user\entity\req\UserListReq.java
 D:\Gitee\demo\ape-frame\ape-user\src\main\java\com\qiangi\user\entity\req\UserReq.java
 D:\Gitee\demo\ape-frame\ape-user\src\main\java\com\qiangi\user\service\impl\UserServiceImpl.java
 D:\Gitee\demo\ape-frame\ape-user\src\main\java\com\qiangi\user\entity\po\UserPo.java

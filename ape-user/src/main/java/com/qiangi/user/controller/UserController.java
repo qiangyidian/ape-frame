@@ -2,7 +2,9 @@ package com.qiangi.user.controller;
 
 
 import com.qiangi.bean.Result;
+import com.qiangi.user.entity.PageResult;
 import com.qiangi.user.entity.dto.UserDto;
+import com.qiangi.user.entity.req.UserListReq;
 import com.qiangi.user.entity.req.UserReq;
 import com.qiangi.user.service.UserService;
 import org.springframework.beans.BeanUtils;
@@ -32,4 +34,12 @@ public class UserController {
     public Result delect(@PathVariable Integer id){
         return Result.ok(userService.delect(id));
     }
+
+    @GetMapping("/page")
+    public PageResult getPage(@RequestBody UserListReq userListReq){
+        UserDto userDto = new UserDto();
+        BeanUtils.copyProperties(userListReq,userDto);
+        return userService.getPage(userDto);
+    }
+
 }

@@ -1,1 +1,4 @@
-com\qingi\App.class
+com\qiangi\bean\Result.class
+com\qiangi\bean\ResultCode.class
+com\qiangi\common\ExceptionAdaptController.class
+com\qiangi\bean\ResultMessage.class

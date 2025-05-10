@@ -15,7 +15,8 @@ public class MybatisConfiguration {
      * @return
      */
     @Bean
-    @ConditionalOnProperty(name = {"sql.beauty.show"}, havingValue = "true", matchIfMissing = true)
+    @ConditionalOnProperty(name = {"sql.beauty.show"}, havingValue = "true", matchIfMissing = true)//进行设定配置文件中的一个配置值,如果能够进行匹配到就会进行开启
+                                                                                                    //如果匹配不到配置值,那么就会进行默认进行开启
     public SqlBeautyInterceptor sqlBeautyInterceptor() {
         return new SqlBeautyInterceptor();
     }

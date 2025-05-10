@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 
 /**
  * mybatis的元数据的处理
+ *将一些数据库中的数据(例如创建时间,创建人)进行使用mybatis的元数据工具进行插入默认值
  * 这个类的使用需要注意包名,该处理器的包名应该能够被启动类进行扫描到
  * 而且实体类应该进行这样的注解进行注释@TableField(value = "update_time", fill = FieldFill.UPDATE)
  */

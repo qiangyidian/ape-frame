@@ -29,5 +29,16 @@
             <artifactId>ape-common-mybatisplus</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
+<!--        进行引入mapstruct进行对象之间的值的赋值-->
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>1.4.2.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+            <version>1.4.2.Final</version>
+        </dependency>
     </dependencies>
 </project>

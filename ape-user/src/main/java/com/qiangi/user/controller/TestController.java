@@ -1,5 +1,6 @@
 package com.qiangi.user.controller;
 
+import com.qiangi.redis.util.RedisShareLockUtil;
 import com.qiangi.redis.util.RedisUtil;
 import com.qiangi.user.convert.UserConverter;
 import com.qiangi.user.entity.po.UserPo;
@@ -14,6 +15,9 @@ public class TestController {
 
     @Autowired
     RedisUtil redisUtil;
+
+    @Autowired
+    RedisShareLockUtil redisShareLockUtil;
 
 
     @GetMapping("/test")
@@ -32,5 +36,9 @@ public class TestController {
     public String testRedis(){
         redisUtil.set("name","qiangi");
         return "testRedis";
+    }
+    @GetMapping("/testRedisLock")
+    public Boolean testRedisLock(){
+        return redisShareLockUtil.lock("001","001",10000L);
     }
 }

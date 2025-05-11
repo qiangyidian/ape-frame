@@ -31,6 +31,24 @@ spring:
         enabled: true
         url-pattern: /*
         exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+  redis:
+    host: 100.66.169.95
+    port: 6379
+    database: 0
+    password: 123456
+#Spring Boot 支持两种主流 Redis 客户端：
+    #
+    #Jedis
+    #
+    #Lettuce
+    #
+    #其中，Lettuce 是基于 Netty 的异步非阻塞客户端，相比 Jedis（同步阻塞），在高并发场景下性能更好，并且线程安全，推荐使用。
+    lettuce:
+      pool:
+        max-active: 20
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
 
 sql:     #进行配置是否进行显示SQL语句中的参数拦截器
   beauty:

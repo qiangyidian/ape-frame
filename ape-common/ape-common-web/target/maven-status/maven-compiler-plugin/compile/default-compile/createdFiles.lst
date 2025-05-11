@@ -1,4 +1,6 @@
 com\qiangi\bean\Result.class
 com\qiangi\bean\ResultCode.class
 com\qiangi\common\ExceptionAdaptController.class
+com\qiangi\bean\PageRequest.class
+com\qiangi\bean\PageResponse.class
 com\qiangi\bean\ResultMessage.class

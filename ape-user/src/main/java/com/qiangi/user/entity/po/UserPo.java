@@ -4,11 +4,12 @@ import com.baomidou.mybatisplus.annotation.*;
 import com.qiangi.user.entity.BaseEntity;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Data
 @TableName("user")
-public class UserPo extends BaseEntity {
+public class UserPo extends BaseEntity implements Serializable {
     @TableId(type = IdType.AUTO)
     private Long id;
 

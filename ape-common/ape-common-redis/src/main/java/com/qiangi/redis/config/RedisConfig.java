@@ -69,6 +69,7 @@ public class RedisConfig {
          * 因为 Redis 是以 JSON 存的，而 JSON 默认不包含类型信息，反序列化的时候
          * Jackson 无法知道你要还原成 Result，所以它就默认变成了 LinkedHashMap，造成你现在的错误：
          * 默认类型信息（Default Typing） 的方法，它的作用是：
+         * 也就是在进行取出缓存中的数据时如果进行反序列化的处理,如果没有默认类型会进行报错,不知道将数据进行反序列化为什么类型的对象
          */
         objectMapper.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL, JsonTypeInfo.As.PROPERTY);
         jsonRedisSerializer.setObjectMapper(objectMapper);

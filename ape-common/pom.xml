@@ -19,6 +19,7 @@
         <module>ape-common-redis</module>
         <module>ape-common-swagger</module>
         <module>ape-common-log</module>
+        <module>ape-common-tool</module>
     </modules>
 
     <properties>

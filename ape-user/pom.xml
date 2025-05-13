@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.qingi</groupId>
+        <groupId>com.qiangi</groupId>
         <artifactId>ape-frame</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -20,12 +20,12 @@
     <dependencies>
 
         <dependency>
-            <groupId>com.qingi</groupId>
+            <groupId>com.qiangi</groupId>
             <artifactId>ape-common-web</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>com.qingi</groupId>
+            <groupId>com.qiangi</groupId>
             <artifactId>ape-common-mybatisplus</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
@@ -41,8 +41,18 @@
             <version>1.4.2.Final</version>
         </dependency>
         <dependency>
-            <groupId>com.qingi</groupId>
+            <groupId>com.qiangi</groupId>
             <artifactId>ape-common-redis</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.qiangi</groupId>
+            <artifactId>ape-common-log</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.qiangi</groupId>
+            <artifactId>ape-common-swagger</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

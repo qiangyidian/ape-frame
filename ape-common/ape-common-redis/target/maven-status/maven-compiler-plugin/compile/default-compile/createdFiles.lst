@@ -1,5 +1,7 @@
 com\qiangi\redis\init\InitCache.class
+com\qiangi\redis\exception\ShareLockException.class
 com\qiangi\redis\util\RedisUtil.class
 com\qiangi\redis\config\RedisConfig.class
 com\qiangi\redis\init\AbstractCache.class
 com\qiangi\redis\util\SpringContextUtil.class
+com\qiangi\redis\util\RedisShareLockUtil.class

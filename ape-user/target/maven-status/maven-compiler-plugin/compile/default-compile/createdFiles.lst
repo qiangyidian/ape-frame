@@ -5,11 +5,16 @@ com\qiangi\user\controller\UserController.class
 com\qiangi\user\entity\req\UserReq.class
 com\qiangi\user\controller\TestController.class
 com\qiangi\user\cache\SysUserCache.class
+com\qiangi\user\entity\po\SysUserPo.class
 com\qiangi\user\cache\CategoryCache.class
+com\qiangi\user\service\impl\SysUserServiceImpl.class
 com\qiangi\user\UserApplication.class
 com\qiangi\user\entity\po\UserPo.class
 com\qiangi\user\service\UserService.class
 com\qiangi\user\entity\req\UserListReq.class
+com\qiangi\user\controller\SysUserController.class
 com\qiangi\user\convert\UserConverterImpl.class
 com\qiangi\user\mapper\UserMapper.class
 com\qiangi\user\entity\dto\UserDto.class
+com\qiangi\user\service\SysUserService.class
+com\qiangi\user\mapper\SysUserMapper.class

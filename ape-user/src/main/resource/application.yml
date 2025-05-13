@@ -49,7 +49,14 @@ spring:
         max-idle: 8
         max-wait: -1ms
         min-idle: 0
-
+swagger:
+  base-package: com.qiangi
+  title: ape-frame
+  contact-name: qiangi
+  contact-url: 地址
+  email: jichi@163.com
+  version: 1.0
+  description: 从0到1 开箱即用脚手架
 sql:     #进行配置是否进行显示SQL语句中的参数拦截器
   beauty:
     show: true
@@ -61,3 +68,9 @@ mybatis-plus:  #进行定义数据库中的逻辑删除,进行标注之后调用
       logic-delete-field: delete_flag
       logic-delete-value: 1
       logic-not-delete-value: 0
+
+logging:
+  config: classpath:log4j2-spring.xml
+log:
+  aspect:
+    enable: true

@@ -11,6 +11,8 @@
         <module name="ape-common-redis" />
         <module name="ape-user" />
         <module name="ape-common-web" />
+        <module name="ape-common-redis (1)" />
+        <module name="ape-common-log" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17">
@@ -19,10 +21,11 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="ape-common" options="-parameters" />
-      <module name="ape-common-mybatisplus" options="-parameters" />
-      <module name="ape-common-redis" options="-parameters" />
-      <module name="ape-common-web" options="-parameters" />
+      <module name="ape-common" options="" />
+      <module name="ape-common-mybatisplus" options="" />
+      <module name="ape-common-redis" options="" />
+      <module name="ape-common-redis (1)" options="" />
+      <module name="ape-common-web" options="" />
       <module name="ape-frame" options="-parameters" />
       <module name="ape-user" options="-parameters" />
       <module name="demo" options="-parameters" />

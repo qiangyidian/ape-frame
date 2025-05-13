@@ -71,6 +71,13 @@ mybatis-plus:  #进行定义数据库中的逻辑删除,进行标注之后调用
 
 logging:
   config: classpath:log4j2-spring.xml
-log:
+
+
+log:    #切面类的开关
   aspect:
     enable: true
+
+
+guava:   #guava本地缓存开关
+  cache:
+    switch: true

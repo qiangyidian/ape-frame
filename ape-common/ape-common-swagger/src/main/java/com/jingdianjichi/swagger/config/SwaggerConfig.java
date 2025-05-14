@@ -1,6 +1,6 @@
-package com.jingdianjichi.swagger.config;
+package com.qiangi.swagger.config;
 
-import com.jingdianjichi.swagger.bean.SwaggerInfo;
+import com.qiangi.swagger.bean.SwaggerInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

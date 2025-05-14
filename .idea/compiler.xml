@@ -12,6 +12,7 @@
         <module name="ape-user" />
         <module name="ape-common-web" />
         <module name="ape-common-log" />
+        <module name="ape-common-websocket" />
         <module name="ape-common-redis (1)" />
         <module name="ape-common-tool" />
       </profile>

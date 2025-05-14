@@ -19,6 +19,7 @@
         <module>ape-user</module>
         <module>ape-common</module>
         <module>ape-dependencies</module>
+        <module>ape-demo</module>
     </modules>
 
     <properties>

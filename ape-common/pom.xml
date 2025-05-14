@@ -20,6 +20,8 @@
         <module>ape-common-swagger</module>
         <module>ape-common-log</module>
         <module>ape-common-tool</module>
+        <module>ape-common-websocket</module>
+        <module>ape-common-starter</module>
     </modules>
 
     <properties>

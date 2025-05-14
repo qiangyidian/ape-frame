@@ -1,0 +1,3 @@
+com\qiangi\App.class
+com\qiangi\websocket\config\WebSocketConfig.class
+com\qiangi\websocket\config\WebSocketServerConfig.class

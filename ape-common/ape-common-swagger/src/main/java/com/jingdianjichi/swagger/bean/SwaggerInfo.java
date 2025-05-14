@@ -1,4 +1,4 @@
-package com.jingdianjichi.swagger.bean;
+package com.qiangi.swagger.bean;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

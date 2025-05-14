@@ -1,7 +1,7 @@
 package com.qiangi.user.designPattern.templatePattern.prod;
 
-import com.jingdianjichi.bean.Result;
-import com.jingdianjichi.bean.ResultCode;
+import com.qiangi.bean.Result;
+import com.qiangi.bean.ResultCode;
 import org.springframework.stereotype.Component;
 
 /**

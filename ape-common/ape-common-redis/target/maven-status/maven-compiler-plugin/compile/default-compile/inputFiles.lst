@@ -1,5 +1,6 @@
 D:\Gitee\demo\ape-frame\ape-common\ape-common-redis\src\main\java\com\qiangi\redis\init\AbstractCache.java
 D:\Gitee\demo\ape-frame\ape-common\ape-common-redis\src\main\java\com\qiangi\redis\util\SpringContextUtil.java
+D:\Gitee\demo\ape-frame\ape-common\ape-common-redis\src\main\java\com\qiangi\redis\util\GuavaCacheUtil.java
 D:\Gitee\demo\ape-frame\ape-common\ape-common-redis\src\main\java\com\qiangi\redis\util\RedisUtil.java
 D:\Gitee\demo\ape-frame\ape-common\ape-common-redis\src\main\java\com\qiangi\redis\init\InitCache.java
 D:\Gitee\demo\ape-frame\ape-common\ape-common-redis\src\main\java\com\qiangi\redis\exception\ShareLockException.java

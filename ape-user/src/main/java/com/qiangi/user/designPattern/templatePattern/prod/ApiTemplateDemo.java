@@ -1,6 +1,6 @@
 package com.qiangi.user.designPattern.templatePattern.prod;
 
-import com.jingdianjichi.bean.Result;
+import com.qiangi.bean.Result;
 
 public class ApiTemplateDemo {
 

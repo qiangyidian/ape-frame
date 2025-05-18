@@ -219,7 +219,7 @@
                                             <w:vertAlign w:val="baseline"/>
                                             <w:lang w:val="en-US" w:eastAsia="zh-CN"/>
                                         </w:rPr>
-                                        <w:t>${name}</w:t>
+                                        <w:t>ape-demo</w:t>
                                     </w:r>
                                     <w:bookmarkStart w:id="0" w:name="_GoBack"/>
                                     <w:bookmarkEnd w:id="0"/>

@@ -9,6 +9,9 @@ import lombok.Data;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+/**
+ * 基本数据,一个实体类的基本组成部分
+ */
 @Data
 public class BaseEntity implements Serializable {
     @TableField(fill = FieldFill.INSERT)

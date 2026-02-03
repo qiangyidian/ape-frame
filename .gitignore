@@ -1,0 +1,85 @@
+# ===== OS / System =====
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ===== Logs =====
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===== Env / Secrets =====
+.env
+.env.*
+*.pem
+*.key
+
+# ===== Dependencies =====
+node_modules/
+bower_components/
+
+# ===== Build / Dist =====
+dist/
+build/
+out/
+target/
+*.jar
+*.war
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+ENV/
+env/
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ===== Java =====
+*.class
+*.iml
+*.idea/
+*.gradle/
+.gradle/
+.settings/
+.project
+.classpath
+
+# ===== Go =====
+bin/
+*.exe
+*.test
+*.out
+
+# ===== Rust =====
+target/
+Cargo.lock
+
+# ===== IDE / Editor =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+
+# ===== Temporary files =====
+*.tmp
+*.temp
+*.bak
+*.old
+*.orig
+
+# ===== Mac / Linux =====
+*.swp
+*~

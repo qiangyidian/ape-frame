@@ -26,3 +26,6 @@ spring:
         wall:
           enabled: true
 
+sql:
+  beauty:
+    show: true

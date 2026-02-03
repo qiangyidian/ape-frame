@@ -23,4 +23,9 @@ public class UserServiceImpl implements UserService {
         int count = userMapper.insert(userPo);
         return count;
     }
+
+    @Override
+    public int delete(Integer id) {
+        return userMapper.deleteById(id);
+    }
 }

@@ -1,0 +1,522 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+ape-common/ape-common-mybatisplus/pom.xml
+ape-common/ape-common-mybatisplus/src/main/java/com/jingdianjichi/handler/MyMetaObjectHandler.java
+ape-common/ape-common-web/pom.xml
+ape-common/pom.xml
+ape-user/pom.xml
+ape-user/src/main/java/com/jingdianjichi/user/controller/TestController.java
+ape-user/src/main/java/com/jingdianjichi/user/controller/UserController.java
+ape-user/src/main/java/com/jingdianjichi/user/entity/dto/UserDto.java
+ape-user/src/main/java/com/jingdianjichi/user/entity/po/UserPo.java
+ape-user/src/main/java/com/jingdianjichi/user/entity/req/UserReq.java
+ape-user/src/main/java/com/jingdianjichi/user/mapper/UserMapper.java
+ape-user/src/main/java/com/jingdianjichi/user/mapper/UserMapper.xml
+ape-user/src/main/java/com/jingdianjichi/user/service/impl/UserServiceImpl.java
+ape-user/src/main/java/com/jingdianjichi/user/service/UserService.java
+ape-user/src/main/java/com/jingdianjichi/user/UserApplication.java
+ape-user/src/main/resources/application.yaml
+pom.xml
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="ape-common/ape-common-mybatisplus/pom.xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.jingdianjichi</groupId>
+        <artifactId>ape-common</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>ape-common-mybatisplus</artifactId>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+<!--        jdbc-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+<!--        数据库连接池-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.21</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+    </dependencies>
+
+</project>
+</file>
+
+<file path="ape-common/ape-common-mybatisplus/src/main/java/com/jingdianjichi/handler/MyMetaObjectHandler.java">
+package com.jingdianjichi.handler;
+
+import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
+import org.apache.ibatis.reflection.MetaObject;
+import org.springframework.stereotype.Component;
+
+import java.util.Date;
+
+
+@Component
+public class MyMetaObjectHandler implements MetaObjectHandler {
+    @Override
+    public void insertFill(MetaObject metaObject) {
+        this.strictInsertFill(metaObject,"createBy",String.class,"jingdianjichi");
+        this.strictInsertFill(metaObject,"createTime", Date.class,new Date());
+        this.strictInsertFill(metaObject,"deleteFlag",Integer.class,0);
+        this.strictInsertFill(metaObject,"version",Integer.class,0);
+    }
+
+    @Override
+    public void updateFill(MetaObject metaObject) {
+        this.strictUpdateFill(metaObject,"updateTime",Date.class,new Date());
+        this.strictUpdateFill(metaObject,"updateBy", String.class,"jingdianjichi");
+    }
+}
+</file>
+
+<file path="ape-common/ape-common-web/pom.xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.jingdianjichi</groupId>
+        <artifactId>ape-common</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>ape-common-web</artifactId>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
+</file>
+
+<file path="ape-common/pom.xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.jingdianjichi</groupId>
+        <artifactId>ape-frame</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>ape-common</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>ape-common-web</module>
+        <module>ape-common-mybatisplus</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+</project>
+</file>
+
+<file path="ape-user/pom.xml">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.jingdianjichi</groupId>
+        <artifactId>ape-frame</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>ape-user</artifactId>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-core</artifactId>
+            <version>3.4.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.jingdianjichi</groupId>
+            <artifactId>ape-common-web</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jingdianjichi</groupId>
+            <artifactId>ape-common-mybatisplus</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+</project>
+</file>
+
+<file path="ape-user/src/main/java/com/jingdianjichi/user/controller/TestController.java">
+package com.jingdianjichi.user.controller;
+
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TestController {
+
+
+    @GetMapping("/test")
+    public String test(){
+        return "Hellow world";
+    }
+}
+</file>
+
+<file path="ape-user/src/main/java/com/jingdianjichi/user/controller/UserController.java">
+package com.jingdianjichi.user.controller;
+
+
+import com.jingdianjichi.user.entity.dto.UserDto;
+import com.jingdianjichi.user.entity.req.UserReq;
+import com.jingdianjichi.user.service.UserService;
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/user")
+public class UserController {
+
+    @Autowired
+    private UserService userService;
+
+    @PostMapping("/add")
+    public Integer addUser(@RequestBody UserReq userReq){
+        UserDto userDto = new UserDto();
+        BeanUtils.copyProperties(userReq, userDto);
+        return userService.addUser(userDto);
+    }
+}
+</file>
+
+<file path="ape-user/src/main/java/com/jingdianjichi/user/entity/dto/UserDto.java">
+package com.jingdianjichi.user.entity.dto;
+
+import lombok.Data;
+
+@Data
+public class UserDto {
+
+    private String name;
+
+    private Integer age;
+}
+</file>
+
+<file path="ape-user/src/main/java/com/jingdianjichi/user/entity/po/UserPo.java">
+package com.jingdianjichi.user.entity.po;
+
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
+import java.util.Date;
+
+@Data
+@TableName("user")
+public class UserPo {
+
+    @TableId(value = "id",type = IdType.AUTO)
+    private Long id;
+    private String name;
+    private Integer age;
+    private String createBy;
+    private Date createTime;
+    private String updateBy;
+    private Date updateTime;
+    private Integer deleteFlag;
+    private Integer version;
+}
+</file>
+
+<file path="ape-user/src/main/java/com/jingdianjichi/user/entity/req/UserReq.java">
+package com.jingdianjichi.user.entity.req;
+
+import lombok.Data;
+
+@Data
+public class UserReq {
+
+    private String name;
+
+    private Integer age;
+}
+</file>
+
+<file path="ape-user/src/main/java/com/jingdianjichi/user/mapper/UserMapper.java">
+package com.jingdianjichi.user.mapper;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.jingdianjichi.user.entity.po.UserPo;
+import org.springframework.stereotype.Repository;
+
+
+@Repository
+public interface UserMapper extends BaseMapper<UserPo> {
+
+}
+</file>
+
+<file path="ape-user/src/main/java/com/jingdianjichi/user/mapper/UserMapper.xml">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jingdianjichi.user.mapper.UserMapper">
+
+
+
+</mapper>
+</file>
+
+<file path="ape-user/src/main/java/com/jingdianjichi/user/service/impl/UserServiceImpl.java">
+package com.jingdianjichi.user.service.impl;
+
+import com.jingdianjichi.user.entity.dto.UserDto;
+import com.jingdianjichi.user.entity.po.UserPo;
+import com.jingdianjichi.user.mapper.UserMapper;
+import com.jingdianjichi.user.service.UserService;
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+@Service
+public class UserServiceImpl implements UserService {
+
+    @Autowired
+    private UserMapper userMapper;
+
+
+    @Override
+    public int addUser(UserDto userDto) {
+        UserPo userPo = new UserPo();
+        BeanUtils.copyProperties(userDto,userPo);
+        int count = userMapper.insert(userPo);
+        return count;
+    }
+}
+</file>
+
+<file path="ape-user/src/main/java/com/jingdianjichi/user/service/UserService.java">
+package com.jingdianjichi.user.service;
+
+import com.jingdianjichi.user.entity.dto.UserDto;
+import org.springframework.stereotype.Service;
+
+public interface UserService {
+    int addUser(UserDto userDto);
+}
+</file>
+
+<file path="ape-user/src/main/java/com/jingdianjichi/user/UserApplication.java">
+package com.jingdianjichi.user;
+
+
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+
+@SpringBootApplication
+@MapperScan(value = "com.jingdianjichi.*.mapper")
+@ComponentScan(value = "com.jingdianjichi")
+public class UserApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(UserApplication.class);
+    }
+}
+</file>
+
+<file path="ape-user/src/main/resources/application.yaml">
+server:
+  port: 8080
+spring:
+  datasource:
+    username: root
+    password: "123456"  # 建议加上双引号
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:13306/ape-frame?serverTimeZone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8
+
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 20
+      min-idle: 20
+      max-active: 100
+      max-wait: 60000
+      stat-view-servlet:
+        enable: true
+        url-pattern: /druid/*
+        login-username: admin
+        login-password: 123456
+      filter:
+        stat:
+          enabled: true
+          log-slow-sql: true
+          slow-sql-millis: 2000
+</file>
+
+<file path="pom.xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.jingdianjichi</groupId>
+    <artifactId>ape-frame</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.2</version>
+        <!-- 强烈建议加上，避免去本地找 parent -->
+        <relativePath/>
+    </parent>
+
+    <modules>
+        <module>ape-user</module>
+        <module>ape-common</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.plugin.version>3.10.1</maven.plugin.version>
+        <maven.compile.source>1.8</maven.compile.source>
+        <maven.compile.target>1.8</maven.compile.target>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.plugin.version}</version>
+                <configuration>
+                    <source>${maven.compile.source}</source>
+                    <target>${maven.compile.target}</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.34</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+</project>
+</file>
+
+</files>
